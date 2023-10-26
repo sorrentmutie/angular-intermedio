@@ -1,0 +1,30 @@
+
+
+<table class="table table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products$ | async">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td><button (click)="gotoDetails(product.id)">Dettagli</button></td>
+    </tr>
+  </tbody>
+
+</table>
+
+
+
+
+<ul>
+  <li *ngFor="let c of customers">
+    {{c.name}}
+  </li>
+</ul>

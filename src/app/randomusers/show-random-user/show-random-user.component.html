@@ -1,0 +1,26 @@
+<p>show-random-user works!</p>
+<!-- <div *ngIf="user">
+
+   <p>{{user.results[0].email}}</p>
+   <img src="{{user.results[0].picture.large}}">
+
+</div> -->
+
+
+<div *ngIf="betterUser">
+  <p>{{betterUser.email}}</p>
+  <img src="{{betterUser.picture.large}}">
+</div>
+
+
+
+<div *ngIf="randomUsers">
+
+  <div *ngFor="let user of randomUsers">
+    <p>{{user.email}}</p>
+    <img src="{{user.picture.large}}">
+  </div>
+
+</div>
+
+{{numero}}

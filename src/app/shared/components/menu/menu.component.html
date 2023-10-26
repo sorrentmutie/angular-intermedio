@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/products']">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/first']">First</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/second']">Second</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/reactive']">Reactive</a>
+      </li>
+
+
+      <li class="nav-item">
+        <div *ngIf="currentUser; else mylogin">
+            <img [src]="currentUser.photo" width="30" height="30" class="rounded-circle">
+            <button (click)="logout()">Logout</button>
+        </div>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+<ng-template #mylogin>
+  <button (click)="login()">Login
+</button>
+
+<!-- <button (click)="start()">Start</button>
+<button (click)="stop()">Stop</button>
+{{name}} -->
